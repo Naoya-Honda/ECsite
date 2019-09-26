@@ -29,7 +29,6 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			if((((LoginDTO) session.get("loginUser")).getAdminFlg() != null)
 					&& (((LoginDTO) session.get("loginUser")).getAdminFlg().equals("1"))){
 				session.put("login_user_id", loginDTO.getLoginId());
-
 				result = "admin";
 			}else{
 				result = SUCCESS;
@@ -39,6 +38,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				session.put("id",buyItemDTO.getId());
 				session.put("buyItem_name",buyItemDTO.getItemName());
 				session.put("buyItem_price",buyItemDTO.getItemPrice());
+				session.put("item_stock", buyItemDTO.getItemStock());
 			}
 		}
 		return result;
@@ -50,14 +50,12 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	public void setLoginUserId(String loginUserId){
 		this.loginUserId = loginUserId;
 	}
-
 	public String getLoginPassword(){
 		return this.loginPassword;
 	}
 	public void setLoginPassword(String loginPassword){
 		this.loginPassword = loginPassword;
 	}
-
 	public Map<String,Object> getSession(){
 		return this.session;
 	}
@@ -65,5 +63,4 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	public void setSession(Map<String,Object> session){
 		this.session = session;
 	}
-
 }

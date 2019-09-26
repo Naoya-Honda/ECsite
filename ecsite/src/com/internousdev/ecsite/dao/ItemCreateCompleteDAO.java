@@ -31,5 +31,4 @@ public class ItemCreateCompleteDAO {
 			con.close();
 		}
 	}
-
 }

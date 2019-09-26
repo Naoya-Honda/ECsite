@@ -18,23 +18,15 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 	public Map<String,Object> session;
 	private String errorMessage;
 
-
 	public String execute(){
 		String result = SUCCESS;
-
-
 
 		String regex ="-?([1-9]\\d{0,2}(,\\d{3})*|[1-9]\\d{0,})";
 		Pattern p = Pattern.compile(regex);
 
-
-
 		String seat1 = "001";
 		Matcher miP = p.matcher(seat1);
 		Matcher miS = p.matcher(itemStock);
-
-
-
 
 		if(!(itemName.equals(""))
 				&& !(itemPrice.equals(""))
@@ -50,10 +42,9 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 			result =SUCCESS;
 
 			}else{
-					setErrorMessage("価格　在庫には数字を入力してください");
+					setErrorMessage("価格 在庫には数字を入力してください");
 					result = ERROR;
 				}
-
 		}else{
 			setErrorMessage("未入力の項目があります");
 			result = ERROR;
