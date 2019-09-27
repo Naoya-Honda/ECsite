@@ -6,5 +6,4 @@ public class AdminAction extends ActionSupport{
 	public String execute(){
 		return SUCCESS;
 	}
-
 }

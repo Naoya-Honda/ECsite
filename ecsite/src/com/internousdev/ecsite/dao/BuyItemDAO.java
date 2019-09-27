@@ -14,7 +14,7 @@ public class BuyItemDAO {
 	private BuyItemDTO buyItemDTO = new BuyItemDTO();
 
 	public BuyItemDTO getBuyItemInfo(){
-		String sql = "SELECT id,item_name,item_price,item_stock FROM item_info_transaction";
+		String sql = "SELECT id,item_name,item_price,item_stock FROM item_info_transaction ORDER BY id";
 
 		try{
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -31,5 +31,4 @@ public class BuyItemDAO {
 		}
 		return buyItemDTO;
 	}
-
 }

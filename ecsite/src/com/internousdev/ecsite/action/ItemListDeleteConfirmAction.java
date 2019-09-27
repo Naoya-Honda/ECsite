@@ -29,7 +29,6 @@ public class ItemListDeleteConfirmAction extends ActionSupport{
 	public Map<String,Object> getSession(){
 		return this.session;
 	}
-
 	public ArrayList<ItemInfoDTO> getItemInfoDTOList(){
 		return this.itemInfoDTOList;
 	}

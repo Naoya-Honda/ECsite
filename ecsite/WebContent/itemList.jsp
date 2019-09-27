@@ -77,8 +77,8 @@ table {
 			</s:if>
 			<s:elseif test="message == null">
 				<h3>商品情報は以下になります。</h3>
-				<table border="1">
 
+				<table border="1">
 					<tr>
 						<th>商品名</th>
 						<th>価格</th>
@@ -94,8 +94,8 @@ table {
 						</tr>
 					</s:iterator>
 				</table>
-				<s:form action="ItemListDeleteConfirmAction">
 
+				<s:form action="ItemListDeleteConfirmAction">
 					<s:submit value="削除" />
 				</s:form>
 			</s:elseif>

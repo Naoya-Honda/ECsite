@@ -57,5 +57,4 @@ public class BuyItemAction extends ActionSupport implements SessionAware{
 	public Map<String,Object> getSession(){
 		return this.session;
 	}
-
 }

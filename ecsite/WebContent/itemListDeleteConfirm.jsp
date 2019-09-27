@@ -12,53 +12,55 @@
 <meta name="keywords" content="" />
 <title>商品削除確認画面</title>
 
-	<style type="text/css">
-	/*=============TAG LAYOUT=============*/
+<style type="text/css">
+/*=============TAG LAYOUT=============*/
 body {
-	margin:0;
-	padding:0;
-	line-height:1.6;
-	letter-spacing:1px;
-	font-family:Verdana, Helvetica, sans-serif;
-	font-size:12px;
-	color:#333;
-	background:#fff;
-	}
-	table {
-	text-align:center;
-	margin:0 auto;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	letter-spacing: 1px;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	background: #fff;
+}
 
-	}
+table {
+	text-align: center;
+	margin: 0 auto;
+}
 
-	/* ========ID LAYOUT======== */
-	#top {
-	width:780px;
-	margin:30px auto;
-	border:1px solid #333;
-	}
-	#header {
+/* ========ID LAYOUT======== */
+#top {
+	width: 780px;
+	margin: 30px auto;
+	border: 1px solid #333;
+}
+
+#header {
 	width: 100%;
 	height: 80px;
 	background-color: black;
-	}
-	#main {
+}
+
+#main {
 	width: 100%;
 	height: 500px;
 	text-align: center;
-	}
-	#footer {
+}
+
+#footer {
 	width: 100%;
 	height: 80px;
 	background-color: black;
-	clear:both;
+	clear: both;
+}
 
-	}
-	#text-right {
+#text-right {
 	display: inline-block;
 	text-align: right;
-
-	}
-	</style>
+}
+</style>
 </head>
 <body>
 	<div id="header">
@@ -70,8 +72,8 @@ body {
 		</div>
 		<div>
 			<p>商品情報を削除します。よろしいですか？</p>
-			<table border="1">
 
+			<table border="1">
 				<tr>
 					<th>商品名</th>
 					<th>価格</th>
@@ -87,6 +89,7 @@ body {
 					</tr>
 				</s:iterator>
 			</table>
+
 			<s:form action="ItemListDeleteCompleteAction">
 				<s:submit value="OK" />
 			</s:form>

@@ -32,24 +32,19 @@ public class ItemCreateCompleteAction extends ActionSupport implements SessionAw
 	public void setItemName(String itemName){
 		this.itemName = itemName;
 	}
-
 	public String getItemPrice(){
 		return this.itemPrice;
 	}
 	public void setItemPrice(String itemPrice){
 		this.itemPrice = itemPrice;
 	}
-
 	public String getItemStock(){
 		return this.itemStock;
 	}
 	public void setItemStock(String itemStock){
 		this.itemStock = itemStock;
 	}
-
 	public void setSession(Map<String,Object> session){
 		this.session = session;
 	}
-
-
 }

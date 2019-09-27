@@ -21,7 +21,6 @@ public class ItemListAction extends ActionSupport implements SessionAware{
 		itemInfoDTOList = itemListDAO.getItemInfo();
 		if(!(itemInfoDTOList.size() > 0)){
 			itemInfoDTOList = null;
-
 		}
 		String result = SUCCESS;
 		return result;
@@ -33,12 +32,10 @@ public class ItemListAction extends ActionSupport implements SessionAware{
 	public Map<String,Object> getSession(){
 		return this.session;
 	}
-
 	public ArrayList<ItemInfoDTO> getItemInfoDTOList(){
 		return this.itemInfoDTOList;
 	}
 	public void setItemInfoDTOList(ArrayList<ItemInfoDTO> itemInfoDTOList){
 		this.itemInfoDTOList = itemInfoDTOList;
 	}
-
 }

@@ -8,8 +8,6 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-
-
 public class ItemCreateConfirmAction extends ActionSupport implements SessionAware{
 
 	private String itemName;
@@ -33,12 +31,10 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 				&& !(itemStock.equals(""))){
 
 			if(miP.find() && miS.find()){
-
 			seat1 = Integer.valueOf(itemPrice).toString();
 			session.put("itemName", itemName);
 			session.put("itemPrice",seat1);
 			session.put("itemStock", itemStock);
-
 			result =SUCCESS;
 
 			}else{
@@ -59,33 +55,28 @@ public class ItemCreateConfirmAction extends ActionSupport implements SessionAwa
 	public void setItemName(String itemName){
 		this.itemName = itemName;
 	}
-
 	public String getItemPrice(){
 		return this.itemPrice;
 	}
 	public void setItemPrice(String itemPrice){
 		this.itemPrice = itemPrice;
 	}
-
 	public String getItemStock(){
 		return this.itemStock;
 	}
 	public void setItemStock(String itemStock){
 		this.itemStock = itemStock;
 	}
-
 	public Map<String,Object> getSession(){
 		return this.session;
 	}
 	public void setSession(Map<String,Object> session){
 		this.session = session;
 	}
-
 	public String getErrorMessage(){
 		return this.errorMessage;
 	}
 	public void setErrorMessage(String errorMessage){
 		this.errorMessage = errorMessage;
 	}
-
 }
